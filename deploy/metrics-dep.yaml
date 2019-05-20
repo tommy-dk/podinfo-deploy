@@ -5,7 +5,7 @@ metadata:
   name: metrics
   namespace: dev
   annotations:
-    flux.weave.works/tag.podinfod: glob:*
+    flux.weave.works/tag.metrics: glob:*
 spec:
   replicas: 1
   selector:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: metrics
-        image: quay.io/repository/brice/metrics-demo:v4-subscription-service
+        image: quay.io/brice/metrics-demo:v4-subscription-service
         ports:
         - containerPort: 3000
         readinessProbe:
